@@ -1,0 +1,48 @@
+
+Dorian Goepp (Univ. Grenoble Alpes); Stella Bitchebe (McGill University); Renaud Lachaize (Univ. Grenoble Alpes); Alain Tchana (Grenoble INP)
+xOS: The End Of The Reign Of The Process-Thread Duo 
+
+Zoltan A. Kocsis, Mathieu Paturel, Isitha Subasinghe, Gernot Heiser (UNSW Sydney)
+First steps in verifying the seL4 Core Platform 
+
+-----------
+
+Zhida An (Tsinghua University); Ding Li, Yao Guo (Peking University); Guijin Gao, Yuxin Ren (Huawei Technologies); Ning Jia (Huawei Group); Xinwei Hu (Huawei)
+Towards OS Heterogeneity Aware Cluster Management for HPC 
+
+Qiuping Wang, Patrick P. C. Lee (The Chinese University of Hong Kong)
+ZapRAID: Toward High-Performance RAID for ZNS SSDs via Zone Append 
+
+Inho Choi, Nimish Wadekar, Raj Joshi (National University of Singapore); Joshua Fried (MIT); Dan R. K. Ports, Irene Zhang (Microsoft Research); Jialin Li (National University of Singapore)
+Capybara: μSecond-Scale Live TCP Migration 
+
+------------
+
+Daon Park, Sungbin Jo, Bernhard Egger (Seoul National University)
+Improving Throughput-oriented Generative Inference with CPUs 
+
+Shen Cai, Zhi Zhou, KongYanGe Zhao, Xu Chen (Sun Yat-sen University)
+Cost-Efficient Serverless Inference Serving with Joint Batching and Multi-Processing 
+
+Woohyeon Baek (Seoul National University); Jonghyun Bae (Lawrence Berkeley National Laboratory); Donghyun Lee, Hyunwoong Bae, Yeonhong Park, Jae W. Lee (Seoul National University)
+Liquid: Mix-and-Match Multiple Image Formats to Balance DNN Training Pipeline 
+
+-------------
+
+Yuki Nakata (SAKURA internet Inc.); Shintaro Suzuki, Katsuya Matsubara (Future University Hakodate)
+Reducing Attack Surface with Container Transplantation for Lightweight Sandboxing 
+
+Yang Xu, Zhuotai Chen (South China University of Technology)
+Family Classification based on Tree Representations for Malware 
+
+Atsushi Koshiba, Felix Gust, Julian Pritzi (Technical University of Munich); Anjo Vahldiek-Oberwagner (Intel Labs); Nuno Santos (INESC-ID / Instituto Superior Tecnico, University of Lisbon); Pramod Bhatotia (Technical University of Munich)
+Trusted Heterogeneous Disaggregated Architectures 
+
+-------------
+
+Quantifying the Security Profile of Linux Applications 
+Georgios C. Androutsopoulos (Purdue University); Giorgos Kappes, Stergios V. Anastasiadis (University of Ioannina)
+
+Mohamed Husain, Xiaoguang Wang, Binoy Ravindran (Virginia Tech)
+Understanding the Security of Linux eBPF Subsystem 
+
