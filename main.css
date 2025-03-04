@@ -25,12 +25,18 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
+h1,h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
+/**
+ * Set `centering` for headers 
+ */ 
+h1 {
+  text-align: center;
+}
 /**
  * Images
  */
