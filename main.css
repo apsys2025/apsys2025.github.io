@@ -373,6 +373,14 @@ pre {
 .sub-title {
   margin-bottom: 5px; }
 
+
+/* unify the color of links */ 
+a {
+  color: #0000EE; /* Or any color you want */
+}
+a:visited {
+  color: #0000EE;
+}
 /**
  * Syntax highlighting styles
  */
