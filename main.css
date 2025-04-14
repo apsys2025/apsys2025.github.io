@@ -37,6 +37,19 @@ ul, ol, dl, figure,
 h1 {
   text-align: center;
 }
+.h1-left {
+  /* optional: replicate any h1 styling you want to keep */
+  /* the override you actually want */
+  text-align: left;
+}
+h3{
+  text-align: left;
+}
+.h3-center {
+  /* optional: replicate any h1 styling you want to keep */
+  /* the override you actually want */
+  text-align: center;
+}
 /**
  * Images
  */
@@ -66,7 +79,7 @@ li > ol {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   font-weight: 400; }
 
 /**
@@ -521,3 +534,10 @@ a:visited {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+    /* Option 1: Add margin under the Sponsors heading */
+
+/* Option 2: Add margin above the Organization heading */
+#organization {
+  margin-top: 4rem;
+}
