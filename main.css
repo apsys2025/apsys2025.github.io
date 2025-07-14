@@ -258,6 +258,19 @@ pre {
         margin-left: 20px; }
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
+/* Style the logo link */
+.nav-logo {
+  display: inline-block;
+  margin-right: 1rem;   /* space between logo and menu items */
+}
+
+/* Constrain the logo’s size */
+.nav-logo img {
+  height: 45px;         /* or whatever fits your header */
+  width: auto;
+  margin-bottom: 8px;/* moves it 2px upward */
+}
+
 
 /**
  * Site footer
@@ -367,11 +380,11 @@ pre {
         font-size: 18px; } }
 
 #banner {
-  background-image: url("./images/banner2.png");
+  background-image: url("./images/APSYS2025_banner_cropped.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 40vh;
+  height: 50vh;
   width: 100vw;
   /*
   height: 330px;
@@ -380,6 +393,18 @@ pre {
   margin: 0 auto;
   }
 
+.thumbnail {
+  position: relative;            /* for any overlaid text */
+  width: 200px;                  /* fixed thumbnail width */
+  height: 120px;                 /* fixed thumbnail height */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;        /* same as banner */
+  border-radius: 4px;            /* optional rounded corners */
+  overflow: hidden;
+  margin-right: 1rem;            /* spacing before text */
+  flex-shrink: 0;                /* if inside a flex container */
+}
 .align-right {
   text-align: right; }
 
