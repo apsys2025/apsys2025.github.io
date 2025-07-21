@@ -566,3 +566,74 @@ a:visited {
 #organization {
   margin-top: 4rem;
 }
+/* Center the entire block */
+.centered-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+/* Place image and table side-by-side */
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Image */
+.image-container img {
+  width: 400px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+/* Table styling */
+.info-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 550px;
+  font-family: sans-serif;
+  border-top: 2px solid #002f6c;
+  text-align: center;
+}
+
+.info-table th,
+.info-table td {
+  padding: 12px;
+  vertical-align: middle;
+  border-bottom: 1px solid #110b0b27;
+}
+
+.info-table th {
+  background-color: #a5a3a3;
+  color: rgb(255, 253, 253);
+  font-weight: bold;
+  width: 25%;
+}
+
+.info-table td {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+/* Button styling */
+.btn-link {
+  display: inline-block;   /* allows side-by-side */
+  background-color: #6396d4;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;      /* spacing between buttons */
+}
+
+.btn-link:hover {
+  background-color: #457dc1;
+}
