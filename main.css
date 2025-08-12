@@ -383,13 +383,10 @@ pre {
   background-image: url("./images/APSYS2025_banner_cropped.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  height: 50vh;
-  width: 100vw;
-  /*
-  height: 330px;
-  width: 1280px;
-  */
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 16 / 6;     /* set to your image’s real ratio */
+  max-width: 1200px;        /* optional: match your .wrapper */
   margin: 0 auto;
   }
 
@@ -560,12 +557,7 @@ a:visited {
   .highlight .il {
     color: #099; }
 
-    /* Option 1: Add margin under the Sponsors heading */
 
-/* Option 2: Add margin above the Organization heading */
-#organization {
-  margin-top: 4rem;
-}
 /* Center the entire block */
 .centered-wrapper {
   display: flex;
