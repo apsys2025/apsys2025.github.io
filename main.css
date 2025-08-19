@@ -629,3 +629,8 @@ a:visited {
 .btn-link:hover {
   background-color: #457dc1;
 }
+.section-card h1 {
+  font-size: 32px;   /* take the global h1 size */
+  line-height: inherit;
+  font-weight: 400;
+}
