@@ -634,3 +634,43 @@ a:visited {
   line-height: inherit;
   font-weight: 400;
 }
+/* --- Fees table ONLY (no inner borders) --- */
+#registration-fees .table-wrap {
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#registration-fees .pricing-table {
+  width: 100% !important;
+  table-layout: fixed;      /* distribute columns evenly */
+  border-collapse: collapse;/* no inner grid lines */
+  display: table;           /* avoid shrink-to-fit */
+  font-size: 16px;
+}
+
+/* equal thirds (requires <colgroup><col/><col/><col/></colgroup>) */
+#registration-fees .pricing-table col { width: 33.3333%; }
+
+/* cells: centered (including first column), no borders/colors */
+#registration-fees .pricing-table thead th,
+#registration-fees .pricing-table tbody th,
+#registration-fees .pricing-table tbody td {
+  padding: 14px 20px;
+  text-align: center;
+  border: 0 !important;
+  background: transparent !important;
+  vertical-align: middle;
+}
+
+/* neutralize legacy width rules on first column if present */
+#registration-fees .pricing-table th[scope="row"] { width: auto !important; }
+
+/* responsive padding */
+@media (max-width: 640px) {
+  #registration-fees .pricing-table thead th,
+  #registration-fees .pricing-table tbody th,
+  #registration-fees .pricing-table tbody td { padding: 12px 14px; }
+}
