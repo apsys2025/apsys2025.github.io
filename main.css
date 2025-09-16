@@ -674,3 +674,44 @@ a:visited {
   #registration-fees .pricing-table tbody th,
   #registration-fees .pricing-table tbody td { padding: 12px 14px; }
 }
+/* Position the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the button/link */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* Hidden dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: auto;         /* don’t force a wide box */
+  white-space: nowrap;     /* keep items in one line */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 10;
+  padding: 0;              /* remove extra padding */
+}
+
+/* Style for the links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  line-height: 1.4;    /* fine-tunes the vertical spacing */
+  text-align: left;
+}
+
+/* Hover effects */
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
