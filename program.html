@@ -30,7 +30,7 @@
         <div class="dropdown">
           <a class="page-link dropbtn" href="#">Program ▾</a>
           <div class="dropdown-content">
-            <!-- <a href="./keynote.html">Keynotes</a> -->
+            <a href="./keynote.html">Keynotes</a>
             <a href="./program.html">Program</a> 
             <a class="page-link" href="./accepted_papers.html">Accepted Papers</a>
           </div>
@@ -77,7 +77,9 @@
     .p-time{font-weight:600;color:#111;text-align:center;align-self:center}
     .p-talk{padding:4px 0}
     .p-title{font-weight:700;margin:0 0 2px 0}
-    .p-auth{color:#374151}
+    .p-auth{color:#374151;margin-top:4px}
+    .p-auth .a-name{font-style:italic; color:#1a56db;}
+    .p-auth .a-affil{color:#555}
     .p-meta{color:var(--muted)}
     
     
@@ -94,11 +96,13 @@
     .p-keynote{break-inside:avoid}
     }
     </style>
-  
-  <section class="program" id="program">
-    <h1>Program</h1>
+    
+    
+    <section class="program" id="program">
+    <h1>Tentative Program</h1>
     <div id="program-root"></div>
-  </section>
+    </section>
+  
   
   <script>
 const SCHEDULE = [
@@ -106,102 +110,124 @@ const SCHEDULE = [
 { type:"section", time:"8:00-9:00", title:"Breakfast" },
 { type:"section", time:"8:45", title:"Opening Remarks" },
 { type:"section", time:"9:00-10:00", title:"Keynote 1", keynote:true },
-{ type:"keynote", title:"Not Your Grandparents' Memory System", authors:["Kimberly Keeton, Principal Software Engineer, SystemsResearch@Google"], link:null },
+{ type:"keynote", title:"Not Your Grandparents' Memory System", authors:["Kimberly Keeton (Principal Software Engineer, SystemsResearch@Google)"], link:{ text:"Talk Abstract", href:"./keynote.html" } },
 { type:"section", time:"10:00-10:45", title:"Session 1: New OS " },
-{ type:"talk", t:"", title:"CrazyOS: Unifying Memory Management and Scheduling" },
-{ type:"talk", t:"", title:"ML-native Dataplane Operating Systems" },
+{ type:"talk", t:"", title:"CrazyOS: Unifying Memory Management and Scheduling", authors:["Alain Tchana (Grenoble INP)","Jordan Gounou (Grenoble INP)","Papa Assane Fall (INRIA and Université Grenoble Alpes)","Renaud Lachaize (University Grenoble Alpes)","Hippolyte Tapamo (University of Yaoundé I)","Celestin Parfait Bessala Bessala (University of Yaoundé I)","Vivien Quema (Grenoble INP)"] },
+{ type:"talk", t:"", title:"ML-native Dataplane Operating Systems", authors:["Inho Choi (National University of Singapore)","Anand Bonde (Microsoft Research)","Jing Liu (Microsoft Research)","Joshua Fried (MIT CSAIL)","Irene Zhang (Microsoft Research)","Jialin Li (National University of Singapore)"] },
 { type:"section", time:"10:45-11:15", title:"Coffee Break" },
 { type:"section", time:"11:15-12:30", title:"Session 2: Storage" },
-{ type:"talk", t:"", title:"Nesting Overlay File Systems with ShadowWhiteout" },
-{ type:"talk", t:"", title:"Metadata-Driven Near-Exclusive Caching for NVMe-oF SANs with eBPF" },
-{ type:"talk", t:"", title:"Staying in the Zone - Retrofitting Zoned Storage into a Scalable Enterprise File System" },
+{ type:"talk", t:"", title:"Nesting Overlay File Systems with ShadowWhiteout", authors:["Kenta Ishiguro (Grenoble INP - UGA)","Kohei Hayama (Hosei University)","Ayase Yokoyama (Hosei University)","Hiroshi Yamada (TUAT)","Toshio Hirotsu (Hosei University)"] },
+{ type:"talk", t:"", title:"Metadata-Driven Near-Exclusive Caching for NVMe-oF SANs with eBPF", authors:["Daegyu Han","Sangeun Chae","Jaehyun Hwang","Beomseok Nam (Sungkyunkwan University)"] },
+{ type:"talk", t:"", title:"Staying in the Zone - Retrofitting Zoned Storage into a Scalable Enterprise File System", authors:["Christoph Hellwig","Hans Holmberg","Damien Le Moal (Western Digital Research)"] },
 { type:"section", time:"12:30-1:30", title:"Lunch " },
 { type:"section", time:"1:30-3:00", title:"Session 3: Machine Learning" },
-{ type:"talk", t:"", title:"Towards Fully Disaggregated Recommendation Model Serving" },
-{ type:"talk", t:"", title:"TARDIS: A GPU-Centric KV Cache Service for Efficient LLM Inference" },
-{ type:"talk", t:"", title:"HyperGen: Optimizing Generative Inference with Long Prompts for Resource-Constrained Systems" },
-{ type:"talk", t:"", title:"Chimera-VDB: Mixed-Precision Vector Database with HNSW Index for RAG-LLM" },
+{ type:"talk", t:"", title:"Towards Fully Disaggregated Recommendation Model Serving", authors:["Yibo Huang (University of Michigan)","Yiming Qiu (University of Hong Kong)","Zhenning Yang (University of Michigan)","Yi Dai (Fudan University)","Dingming Wu (Meta Platforms Inc.)","Fan Lai (University of Illinois Urbana-Champaign)","Jiarong Xing (Rice University)","Ang Chen (University of Michigan)"] },
+{ type:"talk", t:"", title:"TARDIS: A GPU-Centric KV Cache Service for Efficient LLM Inference", authors:["Yifan Hu (Xiamen University)","Shi Qiu (Xiamen University)","Jianqin Yan (Xiamen University)","Hao Chen (Xiamen University)","Xintao Wang (Shanghai Jiao Tong University)","Tang Lu (Xiamen University)","Guangtao Xue (SJTU)","Yiming Zhang (XMU & SJTU)"] },
+{ type:"talk", t:"", title:"HyperGen: Optimizing Generative Inference with Long Prompts for Resource-Constrained Systems", authors:["Lingwen Gong (Huazhong University of Science and Technology)","Kaixin Liu (Huazhong University of Science and Technology)","Xiaolu Li (Huazhong University of Science and Technology)","Shujie Han (Northwestern Polytechnical University)","Patrick P. C. Lee (The Chinese University of Hong Kong)","Yuchong Hu (Huazhong University of Science and Technology)","Dan Feng (Huazhong University of Science and Technology)"] },
+{ type:"talk", t:"", title:"Chimera-VDB: Mixed-Precision Vector Database with HNSW Index for RAG-LLM", authors:["Naoshi Yamane","Michael Ryan Zielewski","Takaki Nakamura","Takuo Suganuma (Tohoku University)"] },
 { type:"section", time:"3:00-3:30", title:"Coffee Break" },
 { type:"section", time:"3:30-5:15", title:"Session 4: Memory" },
-{ type:"talk", t:"", title:"Guess Who’s Back: Comeback Interval based Multi-tier Memory Management" },
-{ type:"talk", t:"", title:"Exploring B+-Tree Implementations Using Scratchpad Memory" },
-{ type:"talk", t:"", title:"Mainframe-Style Channel Controllers for Modern Disaggregated Memory Systems" },
-{ type:"talk", t:"", title:"Meshilon: A Merging-based Java Garbage Collector" },
+{ type:"talk", t:"", title:"Guess Who’s Back: Comeback Interval based Multi-tier Memory Management", authors:["Yeonjeong Jeong","Taehoon Kim","Jihye Lee","Eunji Pak","Kwangwon Koh","Changdae Kim (ETRI)"] },
+{ type:"talk", t:"", title:"Exploring B+-Tree Implementations Using Scratchpad Memory", authors:["Takato Hideshima","Tomoharu Ugawa (The University of Tokyo)"] },
+{ type:"talk", t:"", title:"Mainframe-Style Channel Controllers for Modern Disaggregated Memory Systems", authors:["Zikai Liu","Jasmin Schult","Pengcheng Xu","Timothy Roscoe (ETH Zurich)"] },
+{ type:"talk", t:"", title:"Meshilon: A Merging-based Java Garbage Collector", authors:["Ognjen Marinkovic (University of Belgrade)","Khanh Nguyen (Texas A&M University)"] },
+
 
 { type:"section", time:"", title:"---", breakline:true },
+
 
 { type:"date", text:"Monday, October 13th" },
 { type:"section", time:"8:00-9:00", title:"Breakfast" },
 { type:"section", time:"9:00-10:00", title:"Keynote 2", keynote:true },
-{ type:"keynote", title:"Keynote 2", authors:["Dushyanth Narayanan, Senior Principal Researcher, Microsoft Research Cambridge"], link:null },
+{ type:"keynote", title:"Keynote 2", authors:["Dushyanth Narayanan (Senior Principal Researcher, Microsoft Research Cambridge)"], link:{ text:"Talk Abstract", href:"./keynote.html" } },
 { type:"section", time:"10:00-10:45", title:"Session 1: Cloud Design" },
-{ type:"talk", t:"", title:"Cloud abstractions for AI workloads" },
-{ type:"talk", t:"", title:"A System-level Abstraction and Service for Flourishing AI-powered Applications" },
+{ type:"talk", t:"", title:"Cloud abstractions for AI workloads", authors:["Marco Canini (KAUST)","Theophilus A. Benson (Carnegie Mellon University)","Ricardo Bianchini (Microsoft Azure)","Inigo Goiri (Microsoft)","Dejan Kostic (KTH Royal Institute of Technology)","Peter Pietzuch (Imperial College London)","Simon Peter (University of Washington)"] },
+{ type:"talk", t:"", title:"A System-level Abstraction and Service for Flourishing AI-powered Applications", authors:["Jinrong Yang (IPADS, Shanghai Jiao Tong University)","Zimeng Wang (IPADS, Shanghai Jiao Tong University)","Rong Chen (IPADS, Shanghai Jiao Tong University)","Haibo Chen (IPADS, Shanghai Jiao Tong University)"] },
 { type:"section", time:"10:45-11:15", title:"Coffee Break" },
 { type:"section", time:"11:15-1:00", title:"Session 2: CPU vs Specialized Hardware" },
-{ type:"talk", t:"", title:"Indispensable CPU-centric Checkpointing for GPUs" },
-{ type:"talk", t:"", title:"SHOC: A Simplified Programming Model for Hardware Offloading on DPUs" },
-{ type:"talk", t:"", title:"FPGAs Are the Hero In-Network Computing Needs" },
-{ type:"talk", t:"", title:"CPU Autoscaling With a Kernel of Truth" },
+{ type:"talk", t:"", title:"Indispensable CPU-centric Checkpointing for GPUs", authors:["Junzhe Li (The University of Hong Kong)","Ran Shu (Microsoft Research)","Ziyue Yang (Microsoft Research)","Shuotao Xu (Microsoft Research)","Chenxiong Qian (The University of Hong Kong)","Yongqiang Xiong (Microsoft Research)"] },
+{ type:"talk", t:"", title:"SHOC: A Simplified Programming Model for Hardware Offloading on DPUs", authors:["Florian Knauf (Leibniz University Hannover)","Jan S. Rellermeyer (Leibniz University Hannover)"] },
+{ type:"talk", t:"", title:"FPGAs Are the Hero In-Network Computing Needs", authors:["Suhaib A. Fahmy (KAUST)","Ziyi Yang (KAUST)","Yixi Chen (KAUST)","Gustavo Alonso (ETH Zurich)","Zsolt Istvan (TU Darmstadt)","Marco Canini (KAUST)"] },
+{ type:"talk", t:"", title:"CPU Autoscaling With a Kernel of Truth", authors:["Pratik Rajesh Sampat (University of Illinois Urbana-Champaign)","Tianyin Xu (University of Illinois Urbana-Champaign)","Saugata Ghose (University of Illinois Urbana-Champaign)"] },
 { type:"section", time:"1:00-2:00", title:"Lunch" },
 { type:"section", time:"2:00-3:45", title:"Session 3: Cloud (TBD)" },
-{ type:"talk", t:"", title:"Generating Representative Macrobenchmark Microservice Systems from Distributed Traces with Palette" },
-{ type:"talk", t:"", title:"Between Promise and Pain: The Reality of Automating Failure Analysis in Microservices with LLMs" },
-{ type:"talk", t:"", title:"Can LLMs Replace Time-Tested System Policies?" },
-{ type:"talk", t:"", title:"Towards Microsecond-Scale VM Core Provisioning Agility on Serverless Platforms" },
+{ type:"talk", t:"", title:"Generating Representative Macrobenchmark Microservice Systems from Distributed Traces with Palette", authors:["Vaastav Anand (Max Planck Institute for Software Systems)","Matheus Stolet (Max Planck Institute for Software Systems (MPI-SWS))","Jonathan Mace (Microsoft Research)","Antoine Kaufmann (Max Planck Institute for Software Systems (MPI-SWS))"] },
+{ type:"talk", t:"", title:"Between Promise and Pain: The Reality of Automating Failure Analysis in Microservices with LLMs", authors:["Alessandro Cornacchia (KAUST)","Iliyas Alabdulaal (KAUST)","Ibraheem Saghier (KAUST)","Albaraa Mirdad (KAUST)","Omar Fayoumi (KAUST)","Marco Canini (KAUST)"] },
+{ type:"talk", t:"", title:"Can LLMs Replace Time-Tested System Policies?", authors:["Yibo Zhao (Northeastern University)","Cheng Tan (Northeastern University)"] },
+{ type:"talk", t:"", title:"Towards Microsecond-Scale VM Core Provisioning Agility on Serverless Platforms", authors:["Yibo Yan (University of Southern California)","Seo Jin Park (University of Southern California)"] },
 { type:"section", time:"3:45-4:15", title:"Coffee Break" },
 { type:"section", time:"4:15-5:30", title:"Session 4: Security" },
-{ type:"talk", t:"", title:"Using Recursive Attestation to Scale Trust in Modern Heterogeneous Cloud Architectures" },
-{ type:"talk", t:"", title:"Implementing a Persistent Key-Value Store in a Tamper-Resistant Device for SGX Enclave Applications" },
-{ type:"talk", t:"", title:"Parsec: Fast, Scalable, and Secure Design with Wait-Free Parallelism" },
+{ type:"talk", t:"", title:"Using Recursive Attestation to Scale Trust in Modern Heterogeneous Cloud Architectures", authors:["Yaoxin Jing (Imperial College London)","Michael Steiner (Intel Labs)","Anjo Vahldiek-Oberwagner (Intel Labs)","Mona Vij (Intel Labs)","Lluis Vilanova (Imperial College London)"] },
+{ type:"talk", t:"", title:"Implementing a Persistent Key-Value Store in a Tamper-Resistant Device for SGX Enclave Applications", authors:["Yuto Takahashi (University of Tsukuba)","Yasushi Shinjo (University of Tsukuba)"] },
+{ type:"talk", t:"", title:"Parsec: Fast, Scalable, and Secure Design with Wait-Free Parallelism", authors:["Ruslan Nikolaev (The Pennsylvania State University)"] },
 { type:"section", time:"5:30-5:45", title:"Closing Remarks" },
 { type:"section", time:"6:00", title:"SOSP Conference Reception (Location TBD)" }
 ];
   
-  const root=document.getElementById('program-root');
-  const el=(tag,a={},kids=[])=>{const n=document.createElement(tag);for(const[k,v]of Object.entries(a)){if(k==='class')n.className=v;else if(k==='html')n.innerHTML=v;else n.setAttribute(k,v);}for(const c of kids){if(typeof c==='string')n.appendChild(document.createTextNode(c));else if(c)n.appendChild(c);}return n;};
-  
-  function dateBand({text}){return el('div',{class:'p-date'},[text]);}
-  function section({time,title,subtitle,breakline}){
-    if(breakline){
-    return el('div',{class:'p-section breakline'},[el('hr')]);
-    }
-    const isKeynote = /keynote/i.test(title||'');
-    const cls = isKeynote? 'p-section keynote':'p-section';
-    return el('div',{class:cls},[
-    time? el('span',{class:'time'},[time]):null,
-    ' ',title,
-    subtitle? el('span',{class:'label'},[', '+subtitle]):null
-    ]);
-    }
-  function talk({t,title,authors=[]}){
-    return el('div',{class:'p-list'},[
-      el('div',{class:'p-time'},[t]),
-      el('div',{class:'p-talk'},[
-        el('div',{class:'p-title'},[title]),
-        authors.length?el('div',{class:'p-auth'},[authors.join('; ')]):null
-      ])
-    ]);
-  }
-  function keynote({title,authors=[],link}){
-    // Render keynote talk using the SAME layout as normal talks, but without a timestamp
-    return el('div',{class:'p-list'},[
-      el('div',{class:'p-time'},['']),
-      el('div',{class:'p-talk'},[
-        el('div',{class:'p-title'},[title]),
-        authors.length?el('div',{class:'p-auth'},[authors.join('; ')]):null,
-        link?el('div',{class:'p-meta',html:`<a href="${link.href}">${link.text}</a>`}):null
-      ])
-    ]);
-  }
-  
-  for(const it of SCHEDULE){
-    switch(it.type){
-      case 'date': root.appendChild(dateBand(it)); break;
-      case 'section': root.appendChild(section(it)); break;
-      case 'talk': root.appendChild(talk(it)); break;
-      case 'keynote': root.appendChild(keynote(it)); break;
-    }
-  }
-  </script>
+const root=document.getElementById('program-root');
+const el=(tag,a={},kids=[])=>{const n=document.createElement(tag);for(const[k,v]of Object.entries(a)){if(k==='class')n.className=v;else if(k==='html')n.innerHTML=v;else n.setAttribute(k,v);}for(const c of kids){if(typeof c==='string')n.appendChild(document.createTextNode(c));else if(c)n.appendChild(c);}return n;};
+
+
+function dateBand({text}){return el('div',{class:'p-date'},[text]);}
+function section({time,title,subtitle,breakline}){
+if(breakline){
+return el('div',{class:'p-section breakline'},[el('hr')]);
+}
+const isKeynote = /keynote/i.test(title||'');
+const cls = isKeynote? 'p-section keynote':'p-section';
+return el('div',{class:cls},[
+time? el('span',{class:'time'},[time]):null,
+' ',title,
+subtitle? el('span',{class:'label'},[', '+subtitle]):null
+]);
+}
+function renderAuthors(list){
+const wrap = el('div',{class:'p-auth'});
+(list||[]).forEach((a,i)=>{
+const s = String(a);
+const idx = s.lastIndexOf('(');
+const name = idx>0 ? s.slice(0,idx).trim() : s.trim();
+const aff = (idx>0 && s.endsWith(')')) ? s.slice(idx+1,-1).trim() : '';
+const author = el('span',{class:'author'},[
+el('span',{class:'a-name'},[name]),
+aff? ' ' : '',
+aff? el('span',{class:'a-affil'},['('+aff+')']): null
+]);
+wrap.appendChild(author);
+if(i < list.length-1) wrap.appendChild(document.createTextNode('; '));
+});
+return wrap;
+}
+
+
+function talk({t,title,authors=[]}){
+return el('div',{class:'p-list'},[
+el('div',{class:'p-time'},[t]),
+el('div',{class:'p-talk'},[
+el('div',{class:'p-title'},[title]),
+authors.length? renderAuthors(authors): null
+])
+]);
+}
+function keynote({title,authors=[],link}){
+return el('div',{class:'p-list'},[
+el('div',{class:'p-time'},['']),
+el('div',{class:'p-talk'},[
+el('div',{class:'p-title'},[title]),
+authors.length? renderAuthors(authors): null,
+link?el('div',{class:'p-meta',html:`<a href=\"${link.href}\">Talk Abstract</a>`}):null
+])
+]);
+}
+
+
+for(const it of SCHEDULE){
+switch(it.type){
+case 'date': root.appendChild(dateBand(it)); break;
+case 'section': root.appendChild(section(it)); break;
+case 'talk': root.appendChild(talk(it)); break;
+case 'keynote': root.appendChild(keynote(it)); break;
+}
+}
+</script>
   
