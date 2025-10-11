@@ -99,6 +99,116 @@ Author: YoungGyoun Moon
 Purpose: To build a website for APSys 2018
 Copy From: APSys 2016 website
 --->
+<!-- ===== Live Announcement (drop-in) ===== -->
+<style>
+  /* Announcement bar */
+  #live-announcement.announce{
+    background:#fff7cc;                 /* soft yellow */
+    border:1px solid #ffe08a;
+    box-shadow:0 1px 0 rgba(0,0,0,0.04) inset;
+    border-radius:6px;
+    padding:12px 14px;
+    margin:10px 0 18px;                 /* pushes content down */
+    color:#2b2b2b;
+    font:400 18px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; /* +2px */
+    width:100%;
+    box-sizing:border-box;
+    clear:both;                          /* sit above floated columns */
+  }
+
+  #live-announcement .announce-body{
+    display:flex; align-items:flex-start; gap:12px;
+  }
+
+  #live-announcement .announce-left{ flex:1; min-width:0; }
+
+  /* Title centered, +2px */
+  #live-announcement .announce-title{
+    font-weight:700;
+    margin:0 0 6px;
+    color:#5a4500;
+    font-size:22px;                      /* was 20px */
+    text-align:center;                   /* center align */
+    align-self:stretch;
+  }
+
+  /* Body text inherits 18px from container; keep explicit if you prefer */
+  #live-announcement .announce-text{
+    font-size:18px;                      /* base +2px */
+  }
+
+  /* Links inside body +2px */
+  #live-announcement .announce-text a{
+    color:#1a56db;
+    text-decoration:underline;
+    font-size:22px;                      /* was 20px */
+  }
+
+  /* Meta +2px */
+  #live-announcement .announce-meta{
+    font-size:15px;                      /* was 13px */
+    color:#6b7280;
+    margin-top:4px;
+  }
+
+  /* Close icon +2px (if present) */
+  #live-announcement .announce-close{
+    appearance:none; border:0; background:transparent; cursor:pointer;
+    font-size:24px;                      /* was 22px */
+    line-height:1; padding:0 4px; color:#6b5a00;
+  }
+  #live-announcement .announce-close:hover{ color:#3f3700; }
+
+  /* Print: hide the banner */
+  @media print{ #live-announcement{ display:none !important; } }
+
+  /* Small screens */
+  @media (max-width:640px){
+    #live-announcement{ padding:10px 12px; }
+    #live-announcement .announce-body{ gap:8px; }
+  }
+</style>
+
+<div id="live-announcement" class="announce" role="region" aria-live="polite" aria-label="Live announcement">
+  <div class="announce-body">
+    <div class="announce-left">
+      <div class="announce-title",align="center">Information for Workshop Attendees</div>
+      <div class="announce-text">
+        The workshop is held at <strong>the third floor, Crystal Ballroom 3.</strong>
+      </div>
+      <div class="announce-text">
+        <strong>Wi-Fi</strong> SSID: LOTTEHOTEL (no password)
+      </div>
+      <div class="announce-text">
+        <strong>Lunchbox</strong> will be served on the table, <strong>stay seated!</strong>
+      </div>
+      <div class="announce-text">
+        <strong>Banquet</strong> is held at Crystal Ballroom 3 (same as the presentations), 6:30 PM.
+      </div>
+
+      <!-- <div class="announce-meta">Updated just now</div> -->
+    </div>
+    <!-- <button class="announce-close" type="button" aria-label="Dismiss announcement">×</button> -->
+  </div>
+</div>
+<script>
+  (function(){
+    const BOX_ID = 'live-announcement';
+    const el = document.getElementById(BOX_ID);
+    if (!el) return;
+  
+    // Ensure it shows even if a previous version stored a dismissal flag
+    try {
+      localStorage.removeItem('apsys_announce_msg_v1');
+      localStorage.removeItem('apsys_announce_msg_v2');
+    } catch(e){}
+  
+    // Make sure it’s visible
+    el.style.display = '';
+  })();
+  </script>
+<!-- ===== /Live Announcement ===== -->
+
 
 <h1 id="overview">Welcome to the APSys 2025 Website! </h1>
 <p>Building on the success of its <a href="past.html">predecessors</a>, 
